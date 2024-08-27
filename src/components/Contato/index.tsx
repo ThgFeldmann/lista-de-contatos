@@ -13,9 +13,20 @@ const Contato = ({nome, tel, email}: Props) => {
 
   return (
     <S.Card>
-      <S.Nome>{nome}</S.Nome>
-      <S.Info>{tel}</S.Info>
-      <S.Info>{email}</S.Info>
+      {editando ? (
+        <>
+          <S.Editando>Editando: </S.Editando>
+          <S.Nome value={nome} />
+          <S.Info value={tel} />
+          <S.Info value={email} />
+        </>
+      ) : (
+        <>
+          <S.Nome value={nome} disabled />
+          <S.Info value={tel} disabled />
+          <S.Info value={email} disabled />
+        </>
+      )}
       <S.ActionBar>
         {editando ? (
           <>

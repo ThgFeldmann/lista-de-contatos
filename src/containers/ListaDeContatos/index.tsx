@@ -5,32 +5,32 @@ import { Container, ListaContatos } from "./styles"
 const contatos = [
   {
     nome: 'Fulano deTal',
-    tel: '(55) 99 99999999',
+    tel: '(XX) YY 99999999',
     email: 'fulano@gmail.com'
   },
   {
     nome: 'Siclano deTal',
-    tel: '(55) 99 99999999',
+    tel: '(XX) YY 99999999',
     email: 'Siclano@gmail.com'
   },
   {
     nome: 'Delano deTal',
-    tel: '(55) 99 99999999',
+    tel: '(XX) YY 99999999',
     email: 'Delano@gmail.com'
   },
   {
     nome: 'Fulana deTal',
-    tel: '(55) 99 99999999',
+    tel: '(XX) YY 99999999',
     email: 'Fulana@gmail.com'
   },
   {
     nome: 'Siclana deTal',
-    tel: '(55) 99 99999999',
+    tel: '(XX) YY 99999999',
     email: 'Siclana@gmail.com'
   },
   {
     nome: 'Delana deTal',
-    tel: '(55) 99 99999999',
+    tel: '(XX) YY/ 99999999',
     email: 'Delana@gmail.com'
   }
 ]

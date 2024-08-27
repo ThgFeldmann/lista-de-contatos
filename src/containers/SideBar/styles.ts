@@ -4,7 +4,7 @@ import variaveis from "../../styles/variaveis";
 export const Aside = styled.aside`
   padding: 16px;
   background-color: ${variaveis.cinzaEscuro};
-  color: #fff;
+  color: #eee;
   height: 100vh;
 `
 
