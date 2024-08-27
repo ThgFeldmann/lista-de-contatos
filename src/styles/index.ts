@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components'
+import variaveis from './variaveis'
 
 const EstiloGlobal = createGlobalStyle`
   * {
@@ -12,6 +13,7 @@ const EstiloGlobal = createGlobalStyle`
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 224px auto;
+  background-color: ${variaveis.cinzaClaro}
 `
 
 export default EstiloGlobal

@@ -1,16 +1,19 @@
 import styled from "styled-components";
+import variaveis from "../../styles/variaveis";
 
 export const Card = styled.div`
   padding: 16px;
-  border: 2px solid rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(0, 0, 0, 0.75);
   border-radius: 16px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  background-color: #fcfcfc;
+  background-color: ${variaveis.branco};
 `
 
 export const Nome = styled.h3`
+  padding: 0 4px;
   font-size: 18px;
   font-weight: bold;
+  text-decoration: underline;
 `
 
 export const Info = styled.h4`
@@ -20,9 +23,10 @@ export const Info = styled.h4`
 `
 
 export const ActionBar = styled.div`
-  width: 50%;
-  padding-top: 16px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
 `
 
 export const Botao = styled.button`
@@ -34,5 +38,29 @@ export const Botao = styled.button`
   border-radius: 8px;
   cursor: pointer;
   color: #fff;
-  background-color: #2f3640;
+  background-color: ${variaveis.cinzaEscuro};
+`
+
+export const BotaoSalvar = styled.button`
+  font-weight: bold;
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  background-color: ${variaveis.verde};
+`
+
+export const BotaoRemover = styled.button`
+  font-weight: bold;
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  background-color: ${variaveis.vermelho};
 `
