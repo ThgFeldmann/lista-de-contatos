@@ -3,7 +3,7 @@ import variaveis from "../../styles/variaveis";
 
 export const Card = styled.div`
   padding: 16px;
-  border: 2px solid rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.75);
   border-radius: 16px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   background-color: ${variaveis.branco};
@@ -53,26 +53,10 @@ export const Botao = styled.button`
   background-color: ${variaveis.cinzaEscuro};
 `
 
-export const BotaoSalvar = styled.button`
-  font-weight: bold;
-  font-size: 12px;
-  padding: 8px 12px;
-  margin-right: 8px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  color: #fff;
+export const BotaoSalvar = styled(Botao)`
   background-color: ${variaveis.verde};
 `
 
-export const BotaoRemover = styled.button`
-  font-weight: bold;
-  font-size: 12px;
-  padding: 8px 12px;
-  margin-right: 8px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  color: #fff;
+export const BotaoRemover = styled(Botao)`
   background-color: ${variaveis.vermelho};
 `
