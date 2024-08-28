@@ -10,13 +10,14 @@ export const Card = styled.div`
 `
 
 export const Nome = styled.input`
-  padding: 0 4px;
+  padding: 4px 4px;
   font-size: 18px;
   font-weight: bold;
   text-decoration: underline;
   border: none;
   background-color: ${variaveis.branco};
   color: #000;
+  margin-bottom: 2px;
 `
 
 export const Info = styled.input`
@@ -26,6 +27,7 @@ export const Info = styled.input`
   border: none;
   background-color: ${variaveis.branco};
   color: #000;
+  margin-bottom: 2px;
 `
 
 export const Editando = styled.p`
@@ -37,7 +39,6 @@ export const Editando = styled.p`
 export const ActionBar = styled.div`
   width: 100%;
   padding: 8px;
-  margin-top: 6px;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
 `
 
