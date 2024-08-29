@@ -9,31 +9,21 @@ export const Card = styled.div`
   background-color: ${variaveis.branco};
 `
 
-export const Nome = styled.input`
-  padding: 4px 4px;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: underline;
-  border: none;
-  background-color: ${variaveis.branco};
-  color: #000;
-  margin-bottom: 2px;
-`
-
 export const Info = styled.input`
   padding: 4px 8px;
   font-weight: bold;
   font-size: 16px;
-  border: none;
   background-color: ${variaveis.branco};
   color: #000;
   margin-bottom: 2px;
+  border: 2px solid #000;
+  width: 100%;
 `
 
-export const Editando = styled.p`
-  font-style: italic;
-  font-weight: bold;
-  font-size: 16px
+export const Nome = styled(Info)`
+  padding: 4px 4px;
+  font-size: 18px;
+  text-decoration: underline;
 `
 
 export const ActionBar = styled.div`

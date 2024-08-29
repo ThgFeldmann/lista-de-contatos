@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { SetStateAction, useEffect, useState } from "react"
 import { useDispatch } from "react-redux"
 
 import * as S from "./styles"
@@ -42,7 +42,44 @@ const Contato = ({nome: nomeOriginal, tel: telOriginal, email: emailOriginal, id
 
   return (
     <S.Card>
-      <S.Nome
+      {!editando ? (
+        <>
+          <S.Nome
+            style={{ border: "none" }}
+            value={nome}
+            onChange={(evento: { target: { value: SetStateAction<string>} } ) => setNome(evento.target.value)}
+            disabled
+          />
+          <S.Info
+            style={{ border: "none" }}
+            value={tel}
+            onChange={evento => setTel(evento.target.value)}
+            disabled
+          />
+          <S.Info
+            style={{ border: "none" }}
+            value={email}
+            onChange={evento => setEmail(evento.target.value)}
+            disabled
+          />
+        </>
+      ) : (
+        <>
+          <S.Nome
+            value={nome}
+            onChange={(evento: { target: { value: SetStateAction<string> } }) => setNome(evento.target.value)}
+          />
+          <S.Info
+            value={tel}
+            onChange={evento => setTel(evento.target.value)}
+          />
+          <S.Info
+            value={email}
+            onChange={evento => setEmail(evento.target.value)}
+          />
+        </>
+      )}
+      {/* <S.Nome
         value={nome}
         onChange={evento => setNome(evento.target.value)}
         disabled={!editando}
@@ -56,7 +93,7 @@ const Contato = ({nome: nomeOriginal, tel: telOriginal, email: emailOriginal, id
         value={email}
         onChange={evento => setEmail(evento.target.value)}
         disabled={!editando}
-      />
+      /> */}
       <S.ActionBar>
         {editando ? (
           <>
