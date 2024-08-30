@@ -4,6 +4,7 @@ import * as S from './styles'
 import { Campo } from '../../styles/index'
 import { RootReducer } from '../../store'
 import { alterarNome } from '../../store/reducers/filtro'
+import BotaoAdicionar from '../../components/BtnAdicionar'
 
 const SideBar = () => {
   const dispatch = useDispatch()
@@ -18,8 +19,9 @@ const SideBar = () => {
         <Campo placeholder='Email do contato' type="email" /> */}
       </S.Filtros>
       <S.Filtrados>
-        Procurando contatos por: {nome !== undefined && nome.length >= 0 ? `"${nome}"` : ''}
+        Procurando contatos por: {nome !== undefined && nome.length > 0 ? `"${nome}"` : ''}
       </S.Filtrados>
+      <BotaoAdicionar />
     </S.Aside>
   )
 }
