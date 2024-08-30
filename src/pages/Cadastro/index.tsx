@@ -1,9 +1,12 @@
 
+import Form from "../../containers/Form"
+import SideBar from "../../containers/SideBar"
 
 const Cadastro = () => (
-  <div>
-    Novo contato
-  </div>
+  <>
+    <SideBar />
+    <Form />
+  </>
 )
 
 export default Cadastro

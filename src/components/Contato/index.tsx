@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux"
 import * as S from "./styles"
 import { remover, editar } from "../../store/reducers/contatos"
 import ContatoClass from "../../models/Contato"
+import { Card, Nome, Info, Botao } from "../../styles"
 
 type Props = ContatoClass
 
@@ -41,22 +42,22 @@ const Contato = ({nome: nomeOriginal, tel: telOriginal, email: emailOriginal, id
   }
 
   return (
-    <S.Card>
+    <Card>
       {!editando ? (
         <>
-          <S.Nome
+          <Nome
             style={{ border: "none" }}
             value={nome}
             onChange={(evento: { target: { value: SetStateAction<string>} } ) => setNome(evento.target.value)}
             disabled
           />
-          <S.Info
+          <Info
             style={{ border: "none" }}
             value={tel}
             onChange={evento => setTel(evento.target.value)}
             disabled
           />
-          <S.Info
+          <Info
             style={{ border: "none" }}
             value={email}
             onChange={evento => setEmail(evento.target.value)}
@@ -65,35 +66,20 @@ const Contato = ({nome: nomeOriginal, tel: telOriginal, email: emailOriginal, id
         </>
       ) : (
         <>
-          <S.Nome
+          <Nome
             value={nome}
             onChange={(evento: { target: { value: SetStateAction<string> } }) => setNome(evento.target.value)}
           />
-          <S.Info
+          <Info
             value={tel}
             onChange={evento => setTel(evento.target.value)}
           />
-          <S.Info
+          <Info
             value={email}
             onChange={evento => setEmail(evento.target.value)}
           />
         </>
       )}
-      {/* <S.Nome
-        value={nome}
-        onChange={evento => setNome(evento.target.value)}
-        disabled={!editando}
-      />
-      <S.Info
-        value={tel}
-        onChange={evento => setTel(evento.target.value)}
-        disabled={!editando}
-      />
-      <S.Info
-        value={email}
-        onChange={evento => setEmail(evento.target.value)}
-        disabled={!editando}
-      /> */}
       <S.ActionBar>
         {editando ? (
           <>
@@ -113,12 +99,12 @@ const Contato = ({nome: nomeOriginal, tel: telOriginal, email: emailOriginal, id
           </>
         ) : (
           <>
-            <S.Botao onClick={() => setEditando(true)}>Editar</S.Botao>
+            <Botao onClick={() => setEditando(true)}>Editar</Botao>
             <S.BotaoRemover onClick={() => dispatch(remover(id))}>Remover</S.BotaoRemover>
           </>
         )}
       </S.ActionBar>
-    </S.Card>
+    </Card>
   )
 }
 
