@@ -1,10 +1,10 @@
 
-import Form from "../../containers/Form"
+import Form from "../../containers/Formulario"
 import SideBar from "../../containers/SideBar"
 
 const Cadastro = () => (
   <>
-    <SideBar />
+    <SideBar mostrarFiltros={false} />
     <Form />
   </>
 )

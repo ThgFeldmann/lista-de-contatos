@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import variaveis from "../../styles/variaveis";
-import { Titulo } from "../../styles";
+import { Botao, Titulo } from "../../styles";
 
 export const Aside = styled.aside`
   padding: 16px;
@@ -16,4 +16,9 @@ export const Filtros = styled.div`
 export const Filtrados = styled(Titulo)`
   margin-top: 8px;
   padding: 6px 0;
+`
+
+export const BotaoVoltar = styled(Botao)`
+  background-color: ${variaveis.vermelho};
+  font-size: 14px;
 `
